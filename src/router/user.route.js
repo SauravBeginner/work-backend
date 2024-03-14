@@ -117,7 +117,7 @@ router.get("/getUserData", verifyToken, async (req, res) => {
     }
 
     // Return user data including username
-    res.json({ username: user.username });
+    res.json({ user });
   } catch (error) {
     console.error("Error fetching user data:", error);
     res.status(500).json({ error: "Internal Server Error" });
